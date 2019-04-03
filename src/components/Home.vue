@@ -5,7 +5,7 @@
 
       <h2>People</h2>
 
-      <div class="d-flex flex-wrap">
+      <div id="links" class="d-flex flex-wrap">
         <router-link
           v-for="(person, id) in results"
           :to="`/people/${id}`"
