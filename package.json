@@ -6,13 +6,14 @@
   "scripts": {
     "test": "npm run unit && npm run e2e",
     "unit": "jest",
-    "e2e": "wdio",
+    "e2e": "wdio wdio.conf.js --exclude ./test/e2e/checkErrors.js",
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "eslint src test wdio.conf.js"
   },
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "dependencies": {
+    "testcafe": "^1.1.1",
     "unfetch": "^4.1.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
@@ -34,6 +35,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.2.0",
     "chalk": "^2.4.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^2.1.1",
